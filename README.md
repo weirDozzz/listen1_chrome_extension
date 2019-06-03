@@ -1,8 +1,10 @@
-Listen 1 (Chrome Extension) V1.8.1
+Listen 1 (Chrome Extension) V2.2.0
 ==========
-（最后更新于2018年08月25日）
+（最后更新于2019年05月26日）
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+
+[English Version](https://github.com/listen1/listen1_chrome_extension/blob/master/README_EN.md)
 
 重要
 ----
@@ -20,7 +22,7 @@ Listen1诞生的初衷从不是和大公司的争夺版权利益，而是为了�
 
 搜歌，听歌，就用 `Listen1`。
 
-[![imgur](http://i.imgur.com/yblr3KO.gif)]()
+[![imgur](https://i.imgur.com/dIVFtor.gif)]()
 
 还有精选歌单哦。
 
@@ -44,6 +46,48 @@ Firefox打包安装
 
 更新日志
 -------
+`2019-05-26`
+* 修复酷狗音乐无法播放的bug
+
+`2019-04-26`
+* 修复虾米音乐无法播放的bug
+* 修复播放器未在页面底端显示的bug
+
+`2019-03-03`
+* 修复删除单个歌曲导致歌单所有歌曲消失的bug
+* 修复删除单个歌单导致所有歌单消失的bug
+
+`2019-02-26`
+* 修复qq音乐歌单无法显示的bug
+
+`2018-12-30`
+* 修复酷我音乐歌单缺失歌曲的问题
+* 自动检测客户端语言
+
+`2018-12-29`
+* 修复虾米音乐搜索失败的问题
+* 修复部分QQ音乐歌曲无法播放的问题
+* 修复使用插件时QQ官方网站无法使用的问题
+
+`2018-12-24`
+* 多语言支持，支持英文
+* 新添加到歌单的歌曲将出现在歌单头部
+* 修复版权通知占满屏幕的bug
+
+`2018-12-22`
+* 全新版本2.0发布，更新界面(特别感谢@iparanoid提供主题设计)
+* 升级jquery和angular版本
+
+`2018-12-21`
+* 修复虾米音乐歌单访问的问题
+* 修复网易云音乐歌单只有一首歌的问题
+* 修复bilibili滚动时加载重复歌单的问题
+* 修复酷狗部分音乐无法播放的问题
+* 修复Github Gist备份无法导入的问题
+* 升级soundmanager2库到最新版本
+
+`2018-12-05`
+* 完全修复虾米音乐歌单访问的问题
 
 `2018-08-25`
 * 修复虾米音乐无法播放的bug
@@ -162,11 +206,6 @@ Firefox打包安装
 `2016-05-02`
 
 * 增加音量控制
-
-即将到来的功能
-----
-
-* 歌单云同步（基于Gist）
 
 
 License
