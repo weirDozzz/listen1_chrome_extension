@@ -231,13 +231,13 @@
                                   <div class="album"><a>{{_ALBUMS}}</a></div>
                                   <div class="tools">{{_OPERATION}}</div>
                               </li>
-                              <li ng-repeat="song in result" ng-class-odd="'odd'" ng-class-even="'even'" ng-mouseenter="options=true" ng-mouseleave="options=false">
+                              <li ng-repeat="song in result" ng-class-odd="'odd'" ng-class-even="'even'" ng-mouseenter="options=true" ng-mouseleave="options=false" add-and-play="song">
                                   <div class="title">
                                     <a ng-if="song.disabled" class="disabled" ng-click="copyrightNotice()">{{ song.title |limitTo:30}}</a>
-                                    <a ng-if="!song.disabled" add-and-play="song">{{ song.title |limitTo:30}}</a>
+                                    <a ng-if="!song.disabled">{{ song.title |limitTo:30}}</a>
                                   </div>
-                                  <div class="artist"><a ng-click="showPlaylist(song.artist_id)">{{ song.artist |limitTo:20}}</a></div>
-                                  <div class="album"><a ng-click="showPlaylist(song.album_id)">{{ song.album |limitTo:30}}</a></div>
+                                  <div class="artist"><a ng-click="showPlaylist(song.artist_id, $event)">{{ song.artist |limitTo:20}}</a></div>
+                                  <div class="album"><a ng-click="showPlaylist(song.album_id, $event)">{{ song.album |limitTo:30}}</a></div>
 
                                   <div class="tools">
                                     <a title="{{_ADD_TO_QUEUE}}" class="detail-add-button" add-without-play="song" ng-show="options"><span class="icon li-add"></span></a>
@@ -316,7 +316,7 @@
                             <p> Listen 1 {{_HOMEPAGE}}: <a open-url="'http://listen1.github.io/listen1/'"> http://listen1.github.io/listen1/ </a> </p>
                             <p> Listen 1 {{_EMAIL}}: githublisten1@gmail.com </p>
                             <p> {{_DESIGNER}}: iparanoid </p>
-                            <p> {{_VERSION}}: 2.2.0 {{_LICENSE_NOTICE}}</p>
+                            <p> {{_VERSION}}: 2.1.5 {{_LICENSE_NOTICE}}</p>
                           </div>
                         </div>
                       </div>
@@ -359,10 +359,10 @@
                                     <div class="album"><a>{{_ALBUMS}}</a></div>
                                     <div class="tools">{{_OPERATION}}</div>
                                 </li>
-                                <li ng-repeat="song in songs track by $index" ng-class-odd="'odd'" ng-class-even="'even'" ng-mouseenter="options=true" ng-mouseleave="options=false">
-                                    <div class="title"><a class="disabled" ng-if="song.disabled" ng-click="copyrightNotice()">{{ song.title }}</a><a ng-if="!song.disabled" add-and-play="song">{{ song.title }}</a></div>
-                                    <div class="artist"><a ng-click="showPlaylist(song.artist_id)">{{ song.artist }}</a></div>
-                                    <div class="album"><a ng-click="showPlaylist(song.album_id)">{{ song.album }}</a></div>
+                                <li ng-repeat="song in songs track by $index" ng-class-odd="'odd'" ng-class-even="'even'" ng-mouseenter="options=true" ng-mouseleave="options=false" add-and-play="song">
+                                    <div class="title"><a class="disabled" ng-if="song.disabled" ng-click="copyrightNotice()">{{ song.title }}</a><a ng-if="!song.disabled">{{ song.title }}</a></div>
+                                    <div class="artist"><a ng-click="showPlaylist(song.artist_id, $event)">{{ song.artist }}</a></div>
+                                    <div class="album"><a ng-click="showPlaylist(song.album_id, $event)">{{ song.album }}</a></div>
                                     <div class="tools">
                                     <a title="{{_ADD_TO_QUEUE}}" class="detail-add-button" add-without-play="song" ng-show="options"><span class="icon li-add"></span></a>
                                     <a title="{{_ADD_TO_PLAYLIST}}" class="detail-fav-button" ng-show="options" ng-click="showDialog(0, song)"><span class="icon li-songlist"></span></a>

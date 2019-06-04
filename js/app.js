@@ -281,9 +281,10 @@ const main = () => {
         refreshWindow(url);
       };
 
-      $scope.showPlaylist = (list_id) => {
+      $scope.showPlaylist = (list_id, event) => {
         const url = `/playlist?list_id=${list_id}`;
         $scope.showWindow(url);
+        event.stopPropagation();
       };
 
       $scope.directplaylist = (list_id) => {
